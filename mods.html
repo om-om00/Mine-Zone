@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مودات - MineZone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #2e2e2e;
+      color: #fff;
+      margin: 0;
+    }
+    .header {
+      background-color: #1450aa;
+      padding: 16px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      position: relative;
+    }
+    .menu-icon {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1450aa;
+      padding: 20px;
+      transition: 0.3s;
+      z-index: 10;
+    }
+    .sidebar.active {
+      right: 0;
+    }
+    .sidebar .close-btn {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: block;
+      text-align: left;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+    .section-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 22px;
+      color: #00ffc8;
+    }
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: #3d3d3d;
+      border: 2px solid #5adb5a;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      background-color: #4f4f4f;
+    }
+    .card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #00aa55;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #999;
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    مودات MineZone
+    <span class="menu-icon" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </span>
+  </div>
+  <div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="toggleSidebar()">X</span>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="mods.html">مودات</a>
+    <a href="worlds.html">عوالم</a>
+    <a href="skins.html">سكنات</a>
+  </div>
+
+  <div class="section-title">جميع المودات</div>
+  <div class="sections">
+    <div class="card">
+      <img src="https://i.imgur.com/Zr5o4nF.png" alt="مود الأدوات" />
+      <h3>مود الأدوات السحرية</h3>
+      <p>يضيف أدوات بقدرات خارقة.</p>
+      <a href="https://www.mediafire.com/your-mod-link" target="_blank">تحميل</a>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/NzVZ43J.png" alt="مود الليل" />
+      <h3>مود مخلوقات الليل</h3>
+      <p>وحوش تظهر بالظلام.</p>
+      <a href="https://www.mediafire.com/another-mod" target="_blank">تحميل</a>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/uKq3K0b.png" alt="مود الأسلحة النارية" />
+      <h3>مود الأسلحة النارية</h3>
+      <p>يضيف أسلحة حديثة وتنوع في القتال.</p>
+      <a href="https://www.mediafire.com/firearms-mod" target="_blank">تحميل</a>
+    </div>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة © MineZone 2025
+  </footer>
+</body>
+</html>
