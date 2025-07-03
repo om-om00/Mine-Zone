@@ -105,10 +105,15 @@
     }
   </style>
   <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('active');
-    }
-  </script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('active');
+  }
+  window.addEventListener('load', function () {
+    document.getElementById('sidebar').classList.remove('active');
+  });
+</script>
+</body>
+</html>
 </head>
 <body>
   <div class="header">
