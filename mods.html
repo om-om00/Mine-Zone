@@ -104,13 +104,6 @@
       margin-top: 30px;
     }
   </style>
-  <script>
-  function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-  }
-</script>
-</body>
-</html>
 </head>
 <body>
   <div class="header">
@@ -152,20 +145,22 @@
   <footer>
     جميع الحقوق محفوظة © MineZone 2025
   </footer>
+
   <script>
-  function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    const sidebarLinks = document.querySelectorAll('#sidebar a');
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', function () {
-        document.getElementById('sidebar').classList.remove('active');
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+    window.addEventListener('load', function () {
+      document.getElementById('sidebar').classList.remove('active');
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const sidebarLinks = document.querySelectorAll('#sidebar a');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          document.getElementById('sidebar').classList.remove('active');
+        });
       });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
-
-
