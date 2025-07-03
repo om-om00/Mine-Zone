@@ -150,13 +150,9 @@
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('active');
     }
-
-    // يغلق الشريط الجانبي عند تحميل الصفحة
     window.addEventListener('load', function () {
       document.getElementById('sidebar').classList.remove('active');
     });
-
-    // يغلق الشريط الجانبي عند الضغط على أي رابط داخل الـ sidebar
     document.addEventListener('DOMContentLoaded', function () {
       const sidebarLinks = document.querySelectorAll('#sidebar a');
       sidebarLinks.forEach(link => {
