@@ -94,28 +94,30 @@
         gap: 20px;
         padding: 20px;
       }
-      .card img {
+ .card {
+  background-color: #3d3d3d;
+  border: 2px solid #5adb5a;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+  height: auto; 
+
+.card img {
   width: 100%;
-  max-height: 120px; 
+  height: auto; 
+  max-height: 200px; 
   object-fit: contain;
+  display: block;
   margin-bottom: 10px;
   border-radius: 6px;
-  display: block;
-  background-color: #1f1f1f;
+  background-color: #1a1a1a;
 }
+
 
       .card:hover {
         background-color: #4f4f4f;
       }
-      .card img {
-  max-width: 100%;
-  max-height: 100px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  display: block;
-  background-color: #1f1f1f;
-}
 
       .card a {
         display: inline-block;
