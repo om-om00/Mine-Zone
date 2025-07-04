@@ -92,6 +92,48 @@
         padding: 0 30px;
         color: #e0e0e0;
       }
+        .sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+ .card {
+  background-color: #3d3d3d;
+  border: 2px solid #5adb5a;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+  height: auto; 
+
+.card img {
+  width: 100%;
+  height: auto; 
+  max-height: 200px; 
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+}
+
+
+      .card:hover {
+        background-color: #4f4f4f;
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 12px;
+        background-color: #00aa55;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+       
       .download-section {
         text-align: center;
         margin-top: 60px;
