@@ -9,12 +9,17 @@
         margin: 0;
         padding: 0;
       }
+      html, body {
+        height: 100%;
+      }
       body {
         font-family: Tahoma, sans-serif;
         background-color: #2e2e2e;
         color: #fff;
+        display: flex;
+        flex-direction: column;
       }
- .header {
+      .header {
         background-color: #1450aa;
         padding: 16px;
         text-align: center;
@@ -58,105 +63,63 @@
         margin-bottom: 16px;
         font-size: 18px;
       }
-  .mod-box {
-  width: 90%;
-  max-width: 400px;
-  aspect-ratio: 16 / 9; 
-  border: 4px solid #4caf50;
-  border-radius: 30px;
-  margin: 40px auto;
-  overflow: hidden;
-  background-color: #1e1e1e;
-}
-
-.mod-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
-}
-
-    .mod-name {
+      .mod-box {
+        width: 90%;
+        max-width: 400px;
+        aspect-ratio: 16 / 9; 
+        border: 4px solid #4caf50;
+        border-radius: 30px;
+        margin: 40px auto;
+        overflow: hidden;
+        background-color: #1e1e1e;
+      }
+      .mod-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+      }
+      .mod-name {
         font-size: 30px;
         text-align: right;
         margin-right: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
       }
       .mod-description {
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: right;
-  padding: 0 30px;
-  color: #e0e0e0;
-}
-      .sections {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 20px;
-        padding: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: right;
+        padding: 0 30px;
+        color: #e0e0e0;
       }
- .card {
-  background-color: #3d3d3d;
-  border: 2px solid #5adb5a;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 0.3s;
-  height: auto; 
-
-.card img {
-  width: 100%;
-  height: auto; 
-  max-height: 200px; 
-  object-fit: contain;
-  display: block;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  background-color: #1a1a1a;
-}
-
-
-      .card:hover {
-        background-color: #4f4f4f;
+      .download-section {
+        text-align: center;
+        margin-top: 60px;
       }
-
-      .card a {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 6px 12px;
-        background-color: #00aa55;
+      @keyframes pulse {
+  0% { background-color: #4caf50; }
+  50% { background-color: #66bb6a; }
+  100% { background-color: #4caf50; }
+}
+      .download-btn {
+  animation: pulse 2s infinite;
+}
+      .download-btn {
+        background-color: #4caf50;
         color: white;
+        padding: 14px 28px;
+        font-size: 22px;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 10px;
         font-weight: bold;
+        transition: background-color 0.3s;
+        display: inline-block;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       }
-       
-.download-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 90px auto;
-  padding: 20px 0;
-}
-
-.download-btn {
-  background-color: #4caf50; 
-  color: #1a1a1a;            
-  padding: 14px 28px;
-  font-size: 22px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  display: inline-block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.download-btn:hover {
-  background-color: #3fa543;
-}
-
-    footer {
+      .download-btn:hover {
+        background-color: #3fa543;
+      }
+      footer {
         text-align: center;
         padding: 10px;
         font-size: 14px;
@@ -187,32 +150,37 @@
       <a href="https://om-om00.github.io/Mine-Zone/skins.html">سكنات</a>
     </div>
 
-    <div class="mod-box"> <img src="https://i.postimg.cc/MpVFK9G1/Whats-App-Image-2025-07-03-at-10-22-52-PM.jpg" alt="Essentials" class="mod-image" /></div>
-    <div class="mod-name">Essentials</div> <hr style="width: 90%; margin: 20px auto; border-color: #555;" />
-    <div class="mod-description">إضافات أساسية لماين كرافت! وداعًا للمهام المملة!
+    <div class="mod-box">
+      <img src="https://i.postimg.cc/MpVFK9G1/Whats-App-Image-2025-07-03-at-10-22-52-PM.jpg" alt="Essentials" class="mod-image" />
+    </div>
 
-,سندان قابل للإصلاح
-,ألواح جانبية
-,حقائب تخزين
-,إعادة زراعة المحاصيل تلقائيًا
-,طاولة صنع محمولة، صندوق إندر، فرن
-,كاسر خام
-,كاسر أشجار
-,ماسحات خام
-,خوذة تعدين
-,جهاز تحكم عن بُعد عالمي - لتغيير الوقت والطقس والمزيد
-,نقطة طريق الموت
-,كتل وهمية
-,ناقلات آنية
-,وغيرها الكثير!</div>
+    <div class="mod-name">Essentials</div>
+    <hr style="width: 90%; margin: 20px auto; border-color: #555;" />
 
-<div class="download-section"><a href="https://shrinkme.ink/3rW3lh" class="download-btn">تحميل المود</a>
-</div>
+    <div class="mod-description">
+      إضافات أساسية لماين كرافت! وداعًا للمهام المملة!<br>
+      ,سندان قابل للإصلاح<br>
+      ,ألواح جانبية<br>
+      ,حقائب تخزين<br>
+      ,إعادة زراعة المحاصيل تلقائيًا<br>
+      ,طاولة صنع محمولة، صندوق إندر، فرن<br>
+      ,كاسر خام<br>
+      ,كاسر أشجار<br>
+      ,ماسحات خام<br>
+      ,خوذة تعدين<br>
+      ,جهاز تحكم عن بُعد عالمي - لتغيير الوقت والطقس والمزيد<br>
+      ,نقطة طريق الموت<br>
+      ,كتل وهمية<br>
+      ,ناقلات آنية<br>
+      ,وغيرها الكثير!
+    </div>
 
-<footer>
-  جميع الحقوق محفوظة © MineZone 2025
-</footer>
+    <div class="download-section">
+      <a href="https://shrinkme.ink/3rW3lh" class="download-btn">تحميل المود</a>
+    </div>
 
-    
- </body>
+    <footer>
+      جميع الحقوق محفوظة © MineZone 2025
+    </footer>
+  </body>
 </html>
