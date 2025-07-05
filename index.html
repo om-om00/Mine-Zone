@@ -88,11 +88,7 @@
         margin-bottom: 16px;
         font-size: 18px;
       }
-      .sidebar a.active-link {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  padding: 8px;
-}
+    
       .banner {
         width: 100%;
         padding: 40px 20px;
@@ -170,6 +166,11 @@
         color: #999;
         margin-top: auto;
       }
+      .sidebar a.active-link {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 8px;
+}
     </style>
     <script>
       function toggleSidebar() {
@@ -210,7 +211,7 @@
 
     <div id="sidebar" class="sidebar">
   <span class="close-btn" onclick="toggleSidebar()">X</span>
-<a href="index.html">الصفحة الرئيسية><div class="active-link">الصفحة الرئيسي</div></a>
+<a href="index.html">الصفحة الرئيسية><div class="active-link">الصفحة الرئيسية</div></a>
   <a href="mods.html">مودات</a>
   <a href="worlds.html">عوالم</a>
   <a href="skins.html">سكنات</a>
@@ -254,6 +255,20 @@
 <footer>
   جميع الحقوق محفوظة © MineZone 2025
 </footer>
+  
+<script>
+
+  const currentPage = location.pathname.split("/").pop();
+
+
+  const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+  sidebarLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active-link");
+    }
+  });
+</script>
 
   </body>
 </html>
