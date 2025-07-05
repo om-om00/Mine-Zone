@@ -15,20 +15,36 @@
         color: #fff;
       }
       .header {
-        background-color: #1450aa;
-        padding: 16px;
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        position: relative;
-      }
-      .menu-icon {
-        position: absolute;
-        right: 16px;
-        top: 16px;
-        font-size: 24px;
-        cursor: pointer;
-      }
+  background-color: #1450aa;
+  padding: 12px 16px;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 45px;
+}
+
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+  text-align: center;
+  margin-right: -45px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
       .sidebar {
         position: fixed;
         top: 0;
@@ -164,12 +180,15 @@
 
   </head>
   <body>
-    <div class="header">
-      MineZone
-      <span class="menu-icon" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-      </span>
-    </div><div id="sidebar" class="sidebar">
+    <div class="header"><div class="header-content"><img src="your-logo.png" alt="شعار" class="logo" />
+    <span class="site-name">MINE ZONE</span>
+    <span class="menu-icon" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </span>
+  </div>
+</div>
+
+    <div id="sidebar" class="sidebar">
   <span class="close-btn" onclick="toggleSidebar()">X</span>
   <a href="index.html">الصفحة الرئيسية</a>
   <a href="mods.html">مودات</a>
