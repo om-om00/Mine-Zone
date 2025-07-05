@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MineZone - حساباتنا على السوشيال ميديا</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, sans-serif;
+      background-color: #1560c0;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      z-index: 11;
+    }
+
+    .logo {
+      margin-top: 60px;
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    h1 {
+      color: #80d380;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .social-text {
+      margin: 30px 0 15px;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 30px;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+    .icons a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .icons a:hover {
+      transform: scale(1.2);
+      color: #00ffc8;
+    }
+
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1450aa;
+      padding: 20px;
+      transition: 0.3s;
+      z-index: 10;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar .close-btn {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: block;
+      text-align: left;
+      color: white;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #ccc;
+      background-color: transparent;
+    }
+  </style>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+
+  <span class="menu-icon" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </span>
+
+  <div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="toggleSidebar()">X</span>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="mods.html">مودات</a>
+    <a href="worlds.html">عوالم</a>
+    <a href="skins.html">سكنات</a>
+  </div>
+
+  <div class="logo">
+    <img src="https://i.postimg.cc/25QwdHqr/photo-6001539329949812801-y.jpg" alt="MineZone Logo">
+  </div>
+
+  <h1>MINE ZONE</h1>
+
+  <div class="social-text">تابعنا على منصات السوشيال ميديا</div>
+
+  <div class="icons">
+    <a href="https://www.tiktok.com/@minezone64?_t=ZS-8xlkEf9swnC&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>جميع الحقوق محفوظة © MineZone 2025</footer>
+
+</body>
+</html>
 
