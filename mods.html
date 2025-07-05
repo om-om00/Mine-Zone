@@ -251,5 +251,17 @@
   جميع الحقوق محفوظة © MineZone 2025
 </footer>
 
+  <script>
+  let currentPage = location.pathname.split("/").pop();
+  if (currentPage === "") currentPage = "index.html"; // دعم لفتح الموقع مباشرة
+
+  const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+  sidebarLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active-link");
+    }
+  });
+</script>
   </body>
 </html>
