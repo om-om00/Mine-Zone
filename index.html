@@ -211,7 +211,7 @@
 
     <div id="sidebar" class="sidebar">
   <span class="close-btn" onclick="toggleSidebar()">X</span>
-<a href="index.html">الصفحة الرئيسية></a>
+<a href="index.html">الصفحة الرئيسية</a>
   <a href="mods.html">مودات</a>
   <a href="worlds.html">عوالم</a>
   <a href="skins.html">سكنات</a>
@@ -257,9 +257,8 @@
 </footer>
   
 <script>
-
-  const currentPage = location.pathname.split("/").pop();
-
+  let currentPage = location.pathname.split("/").pop();
+  if (currentPage === "") currentPage = "index.html"; // دعم لفتح الموقع مباشرة
 
   const sidebarLinks = document.querySelectorAll('.sidebar a');
 
@@ -269,6 +268,7 @@
     }
   });
 </script>
+
 
   </body>
 </html>
