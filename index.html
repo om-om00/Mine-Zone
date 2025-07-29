@@ -174,26 +174,36 @@
     <script>
       function toggleSidebar() {
         document.getElementById('sidebar').classList.toggle('active');
-      }const suggestionsList = [
-    "مود الأدوات السحرية",
-    "مخلوقات الليل",
-    "عالم السفينة",
-    "سكن المحارب",
-    "مود السرعة",
-    "مود الطيران"
-  ];
+      }
+      const suggestionsList = [
+  { name: "مود الأدوات السحرية", link: "mod-details/magic-tools.html" },
+  { name: "مخلوقات الليل", link: "mod-details/night-creatures.html" },
+  { name: "عالم السفينة", link: "mod-details/ship-world.html" },
+  { name: "سكن المحارب", link: "mod-details/warrior-skin.html" },
+  { name: "مود السرعة", link: "mod-details/speed-mod.html" },
+  { name: "مود الطيران", link: "mod-details/fly-mod.html" }
+];
 
-  function showSuggestions(value) {
-    const box = document.getElementById('suggestions');
-    box.innerHTML = '';
-    if (value.trim() === '') return;
-    const filtered = suggestionsList.filter(item => item.includes(value));
-    filtered.forEach(item => {
-      const div = document.createElement('div');
-      div.textContent = item;
-      box.appendChild(div);
-    });
-  }
+ function showSuggestions(value) {
+  const box = document.getElementById('suggestions');
+  box.innerHTML = '';
+  if (value.trim() === '') return;
+
+  const filtered = suggestionsList.filter(item =>
+    item.name.includes(value)
+  );
+
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = item.name;
+    div.style.cursor = 'pointer';
+    div.onclick = () => {
+      window.location.href = item.link;
+    };
+    box.appendChild(div);
+  });
+}
+
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
@@ -243,10 +253,6 @@
 " target="_blank">انتقال</a>
   </div> 
 
-<footer>
-  جميع الحقوق محفوظة © MineZone 2025
-</footer>
-
   <script>
   let currentPage = location.pathname.split("/").pop();
   if (currentPage === "") currentPage = "index.html"; 
@@ -259,8 +265,9 @@
     }
   });
 </script>
-  <footer style="text-align: center; padding: 20px; font-size: 14px;">
-  <a href="privacy.html">سياسة الخصوصية</a>
+  <footer>
+  <p>جميع الحقوق محفوظة © MineZone 2025</p>
+  <a href="privacy.html" style="color: #ccc; text-decoration: none;">سياسة الخصوصية</a>
 </footer>
 
   </body>
