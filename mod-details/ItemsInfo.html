@@ -3,6 +3,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MineZone - ماين زون</title>
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+
     <style>
       * {
         box-sizing: border-box;
@@ -27,13 +29,40 @@
         font-weight: bold;
         position: relative;
       } 
-      .menu-icon {
-        position: absolute;
-        right: 16px;
-        top: 16px;
-        font-size: 24px;
-        cursor: pointer;
-      }
+     .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: ltr; 
+}
+
+
+.logo {
+  height: 45px;
+}
+      .logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.site-name {
+  font-family: 'Minecraftia', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+  text-align: center;
+  margin-right: -45px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
       .sidebar {
         position: fixed;
         top: 0;
@@ -79,19 +108,25 @@
         object-fit: cover; 
         display: block;
       }
-      .mod-name {
-        font-size: 30px;
-        text-align: right;
-        margin-right: 30px;
-        margin-bottom: 70px;
-      }
-      .mod-description {
-        font-size: 16px;
-        line-height: 1.8;
-        text-align: right;
-        padding: 0 30px;
-        color: #e0e0e0;
-      }
+     .mod-name {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 70px;
+}
+    .mod-description {
+  font-size: 17px;
+  line-height: 2;
+  text-align: right;
+  padding: 20px 30px;
+  color: #e0e0e0;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
       .sections {        display: grid;
  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));        gap: 20px;
   padding: 20px;   
@@ -152,12 +187,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
   <body>
-    <div class="header">
-      MineZone
-      <span class="menu-icon" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-      </span>
-    </div>
+   <div class="header">
+  <div class="header-content">
+    <a href="FollowUs.html">
+      <img src="https://i.postimg.cc/Y9FQw7L1/photo-6001539329949812857-y.jpg" alt="شعار" class="logo" />
+    </a>
+    <span class="site-name">MINE ZONE</span>
+    <span class="menu-icon" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </span>
+  </div>
+</div>
+
 
     <div id="sidebar" class="sidebar">
       <span class="close-btn" onclick="toggleSidebar()">X</span>
@@ -169,25 +210,25 @@
     </div>
 
     <div class="card">
-      <img src="https://i.postimg.cc/jqg8tLz6/photo-5951930662384682158-x.jpg" alt="Action and Stuff" class="card-img" />
+      <img src="https://i.postimg.cc/wv8JGK3H/638562015953828691.png" alt="ItemsInfo" class="card-img" />
     </div>
 
-    <div class="mod-name">Action and Stuff</div>
+    <div class="mod-name">Items Info</div>
     <hr style="width: 90%; margin: 20px auto; border-color: #555;" />
 
-    <div class="mod-description">
-     أشباح سعيدة وشبح صغير!،
- رسوم متحركة للغوص!، 
-استيقاظ القوارب وتأثيرات الجسيمات!، الذئب مستلقٍ ونائم، القطة تتسكع!،
- تأثير الحبار الذابل والمتوهج، دعم تعبيرات الجلد!، وأكثر من ذلك بكثير!
-    </div>
+    <div class="mod-description"> 
+  ⚠️ <strong>المود خاص بإصدار Bedrock</strong> ⚠️<br><br>
+هل تبي تلعب بشكل أسهل وأذكى؟ مود Items Info هو الحل! يضيف لك معلومات فورية وواضحة على أسماء الأطعمة والأدوات، مثل نقاط الجوع اللي تعيدها الأطعمة، ومتانة الأدوات، وكل التفاصيل اللي تحتاجها عشان تختار بسرعة وتلعب بدون تعقيد. ودّع التخمين والبحث، وخليك دايمًا جاهز ومستعد مع هذا المود اللي يرفع مستوى تجربتك بشكل رهيب!
+</div>
 
     <div class="download-section">
-      <a href="https://www.mediafire.com/file/04v6q3o0otr47d5/Actions%252B%2526%252BStuff%252B1.5%252Bby%252Bmatiss.mcpack/file" class="download-btn">تحميل المود</a>
+      <a href="https://www.mediafire.com/file/60ilvyqbtkklyhc/Item_Info%252B_v1.16.2.mcpack/file" class="download-btn">تحميل المود</a>
     </div>
 
     <footer>
-      جميع الحقوق محفوظة © MineZone 2025
-    </footer>
+  <p>جميع الحقوق محفوظة © MineZone 2025</p>
+  <a href="privacy.html" style="color: #ccc; text-decoration: none;">سياسة الخصوصية</a>
+</footer>
+
   </body>
 </html>
