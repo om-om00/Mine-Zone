@@ -27,13 +27,40 @@
         font-weight: bold;
         position: relative;
       } 
-      .menu-icon {
-        position: absolute;
-        right: 16px;
-        top: 16px;
-        font-size: 24px;
-        cursor: pointer;
-      }
+     .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: ltr; 
+}
+
+
+.logo {
+  height: 45px;
+}
+      .logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.site-name {
+  font-family: 'Minecraftia', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+  text-align: center;
+  margin-right: -45px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
       .sidebar {
         position: fixed;
         top: 0;
