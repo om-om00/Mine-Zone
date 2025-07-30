@@ -1,13 +1,179 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>سياسة الخصوصية</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MineZone - ماين زون</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MineZone</title>
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-<body style="font-family: Arial, sans-serif; direction: rtl; padding: 20px; max-width: 800px; margin: auto;">
-  <h1>سياسة الخصوصية</h1>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #2e2e2e;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background-color: #1450aa;
+      padding: 12px 16px;
+      position: relative;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      direction: ltr;
+    }
+    .logo {
+      height: 45px;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    .site-name {
+      font-family: 'Minecraftia', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      flex: 1;
+      text-align: center;
+      margin-right: -45px;
+    }
+    .menu-icon {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1450aa;
+      padding: 20px;
+      transition: 0.3s;
+      z-index: 10;
+    }
+    .sidebar.active {
+      right: 0;
+    }
+    .sidebar .close-btn {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: block;
+      text-align: left;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+    .sidebar a.active-link {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .about-section {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #3d3d3d;
+      border-radius: 12px;
+      border: 2px solid #5adb5a;
+      margin-top: 40px;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      color: #00ffc8;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #999;
+      margin-top: 40px;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background-color: #00aa55;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      font-weight: bold;
+    }
+    #scrollTopBtn:hover {
+      background-color: #008f47;
+    }
+    #scrollTopBtn:focus,
+    #scrollTopBtn:active {
+      background-color: #00aa55;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <a href="FollowUs.html">
+        <img src="https://i.postimg.cc/Y9FQw7L1/photo-6001539329949812857-y.jpg" alt="شعار" class="logo" />
+      </a>
+      <span class="site-name">MINE ZONE</span>
+      <span class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="toggleSidebar()">X</span>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="mods.html">مودات</a>
+    <a href="worlds.html">عوالم</a>
+    <a href="skins.html">سكنات</a>
+    <a href="FollowUs.html">تابعنا</a>
+    <a href="privacy.html">سياسة الخصوصية</a>
+    <a href="about.html" class="active-link">حول</a>
+  </div>
+
+  <div class="about-section">
+    <h1>سياسة الخصوصية</h1>
 
   <p>نحن في هذا الموقع نقدر خصوصيتك، ونسعى إلى حماية معلوماتك أثناء استخدامك لموقعنا.</p>
 
@@ -30,9 +196,34 @@
   <h2>التواصل معنا</h2>
   <p>إذا كانت لديك أي استفسارات، يمكنك التواصل معنا عبر البريد الإلكتروني: 
   <a href="mailto:minezonecontact@gmail.com"><strong>minezonecontact@gmail.com</strong></a>
-</p>
+  </p>
+  </div>
 
+  <footer>
+    <p>جميع الحقوق محفوظة © MineZone 2025</p>
+    <a href="privacy.html" style="color: #ccc; text-decoration: none;">سياسة الخصوصية</a>
+  </footer>
+
+  <script>
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="العودة للأعلى">⬆</button>
 
 </body>
 </html>
-
