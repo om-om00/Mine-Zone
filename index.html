@@ -164,6 +164,27 @@
       color: #999;
       margin-top: auto;
     }
+   scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 100;
+  background-color: #1450aa;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none; /* مخفي في البداية */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0f3c82;
+}
+
   </style>
 </head>
 <body>
@@ -246,6 +267,20 @@
   </footer>
 
   <script>
+window.onscroll = function () {
+  const btn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+    
     window.onload = function () {
       function toggleSidebar() {
         document.getElementById('sidebar').classList.toggle('active');
@@ -291,6 +326,8 @@
       });
     };
   </script>
+  
+<button onclick="scrollToTop()" id="scrollTopBtn" title="العودة للأعلى">⬆</button>
 
 </body>
 </html>
